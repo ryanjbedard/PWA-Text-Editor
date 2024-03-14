@@ -24,7 +24,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: './src-sw.js',
       }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
@@ -34,7 +34,7 @@ module.exports = () => {
         crossorigin: 'use-credentials',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -45,7 +45,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
         {
