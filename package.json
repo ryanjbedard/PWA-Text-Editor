@@ -1,0 +1,33 @@
+{
+    "name": "jate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+        "start": "npm run build && cd server && node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon server.js --ignore client",
+        "build": "cd client && npm run build",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "client": "cd client && npm start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "Babel": "^0.0.1",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "babel-loader": "^8.2.3",
+        "css-loader": "^6.5.1",
+        "html-webpack-plugin": "^5.5.0",
+        "nodemon": "^2.0.4",
+        "webpack": "^5.90.3",
+        "webpack-cli": "^5.1.4"
+    }
+}
