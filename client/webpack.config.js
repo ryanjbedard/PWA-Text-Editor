@@ -30,6 +30,10 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Just another text editor made in a browser',
+        fingerprints: false,
+        start_url: '/',
+        publicPath: '/',
+        inject: true,
         background_color: '#225ca3',
         crossorigin: 'use-credentials',
         icons: [

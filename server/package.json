@@ -6,7 +6,6 @@
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
-    "type": "module",
     "keywords": [],
     "author": "",
     "license": "ISC",

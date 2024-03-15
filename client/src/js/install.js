@@ -4,7 +4,7 @@ const butInstall = document.getElementById('buttonInstall');
 let deferredPrompt;
 
 // TODO: Add an event handler to the `beforeinstallprompt` event
-window.addEventListener('beforeinstallprompt', (event) => {
+window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the mini-infobar from appearing on mobile
 e.preventDefault();
 // Stash the event so it can be triggered later.
@@ -28,7 +28,7 @@ butInstall.addEventListener('click', async () => {
 
 
 // TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (event) => {
+window.addEventListener('appinstalled', (e) => {
   console.log('App installed');
 });
 
